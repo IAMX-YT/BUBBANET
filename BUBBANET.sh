@@ -8,9 +8,32 @@
 BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate`
 BUBBAPath="$HOME/BUBBANET"
 
+
+
+#---------------------------------------------------------------------------------------------------------------------- 
+
 Restart(){
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
 }
+
+Permission(){
+#SET EXECUTION PERMISSIONS
+echo "
+chmod 777 $HOME/BUBBANET/BUBBANET
+chmod 777 $HOME/BUBBANET/BUBBA.sh
+chmod 777 $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
+
+chmod +x $HOME/BUBBANET/BUBBANET
+chmod +x $HOME/BUBBANET/BUBBA.sh
+chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
+" >> $HOME/BUBBANET/Permission.sh
+
+rm -rf $HOME/BUBBANET/Permission.sh
+
+bash Permission.sh
+}
+
+#----------------------------------------------------------------------------------------------------------------------
 
 Red='\e[0;31m'  # Red & Black
 SkyBlue='\e[0;36m'  # SkyBlue & Black
@@ -56,19 +79,7 @@ wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json -O $BU
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 
 #---------------------------------------------------------------------------------------------------------------------- 
-#SET EXECUTION PERMISSIONS
-echo "
-chmod 777 $HOME/BUBBANET/BUBBANET
-chmod 777 $HOME/BUBBANET/BUBBA.sh
-chmod 777 $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
-
-chmod +x $HOME/BUBBANET/BUBBANET
-chmod +x $HOME/BUBBANET/BUBBA.sh
-chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
-" >> $HOME/BUBBANET/Permission.sh
-
-
-#---------------------------------------------------------------------------------------------------------------------- 
+Permission;
 Restart;
 
 
@@ -83,7 +94,7 @@ if [[ $BUBBAUpdate == "1" ]]; then
 
 
 
-cd $BUBBAPath
+Permission;
 ./BUBBA.sh
 
 printf "${SkyBlue}Internet Connected Successfully${White}\n"
