@@ -6,7 +6,7 @@
 
 #IMPORTS
 BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate`
-BUBBAPath="$HOME/BUBBANET"
+BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
 
 
 
@@ -18,7 +18,7 @@ bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANE
 
 Permission(){
 #SET EXECUTION PERMISSIONS
-echo "
+cat > $BUBBAPath/Permission.sh <<EOF
 chmod 777 $HOME/BUBBANET/BUBBANET
 chmod 777 $HOME/BUBBANET/BUBBA.sh
 chmod 777 $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
@@ -26,10 +26,10 @@ chmod 777 $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
 chmod +x $HOME/BUBBANET/BUBBANET
 chmod +x $HOME/BUBBANET/BUBBA.sh
 chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
-" >> $HOME/BUBBANET/Permission.sh
+EOF
 
-bash $HOME/BUBBANET/Permission.sh
-rm -rf $HOME/BUBBANET/Permission.sh
+bash $BUBBAPath/Permission.sh
+rm -rf $BUBBAPath/Permission.sh
 }
 
 #----------------------------------------------------------------------------------------------------------------------
@@ -96,6 +96,7 @@ if [[ $BUBBAUpdate == "1" ]]; then
 
 
 Permission;
+cd $BUBBAPath
 ./BUBBA.sh
 
 printf "${SkyBlue}Internet Connected Successfully${White}\n"
