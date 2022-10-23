@@ -7,6 +7,7 @@
 Red='\e[0;31m'  # Red & Black
 SkyBlue='\e[0;36m'  # SkyBlue & Black
 
+
 printf "${Red}\nWelcome To BUBBANET"
 sleep 2
 printf "\n"
