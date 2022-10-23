@@ -13,7 +13,7 @@ sleep 4
 
 
 #IMPORTS
-BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/BUBBAUpdate` >/dev/null 2>&1
+BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate` >/dev/null 2>&1
 BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
 
 
@@ -39,6 +39,7 @@ echo -e  "Plugin are installed"
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Making Folder
+mkdir $BUBBAPath
 mkdir $BUBBAPath/storage/psiphon/database
 
 #Download Program
