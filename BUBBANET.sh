@@ -9,10 +9,8 @@ SkyBlue='\e[0;36m'  # SkyBlue & Black
 
 
 printf "${Red}\nWelcome To BUBBANET"
-sleep 2
 printf "\n"
 printf "${SkyBlue}\nConnecting..."
-sleep 2
 
 
 #IMPORTS
