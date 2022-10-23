@@ -42,13 +42,16 @@ printf  "${SkyBlue}Plugin are installed${White}"
 #---------------------------------------------------------------------------------------------------------------------- 
 #Making Folder
 mkdir $BUBBAPath
+mkdir $BUBBAPath/storage
+mkdir $BUBBAPath/storage/psiphon
 mkdir $BUBBAPath/storage/psiphon/database
 
+#---------------------------------------------------------------------------------------------------------------------- 
 #Download Program
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh  -O $BUBBAPath/BUBBA.sh
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/BUBBANET
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json  -O $BUBBAPath/config.json
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+wget -O $BUBBAPath/BUBBA.sh https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh
+wget -O $BUBBAPath/BUBBANET https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET
+wget -O $BUBBAPath/config.json https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json
+wget -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb  https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
