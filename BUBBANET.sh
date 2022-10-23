@@ -17,11 +17,11 @@ SkyBlue='\e[0;36m'  # SkyBlue & Black
 White='\e[0m' # ORIGNAL {Black & White}
 
 clear
-printf "${Red}\nWelcome To BUBBANET"
+printf "${Red}Welcome To BUBBANET\n"
 sleep 2
 printf "\n"
 sleep 2
-printf "${SkyBlue}\nConnecting..."
+printf "${SkyBlue}Connecting...\n"
 
 
 #Download & Setup BUBBANET 
@@ -34,11 +34,11 @@ if [[ ! -d $BUBBAPath ]]; then
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
-printf "${Red}\nInstalling... Required Plugins${White}"
+printf "${Red}Installing... Required Plugins${White}\n"
 # apt update && pkg update && apt upgrade && pkg upgrade
 pkg install wget curl -y
 clear
-printf "${SkyBlue}Plugin are Installed Successfully${White}"
+printf "${SkyBlue}Plugin are Installed Successfully${White}\n"
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
@@ -57,9 +57,11 @@ wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $B
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
-chmod +x $BUBBAPath/* >/dev/null 2>&1
-chmod +x $BUBBAPath/*/* >/dev/null 2>&1
-chmod +x $BUBBAPath/*/*/* >/dev/null 2>&1
+chmod +x $BUBBAPath/BUBBANET
+chmod +x $BUBBAPath/BUBBA.sh
+chmod +x $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+
+
 
 #---------------------------------------------------------------------------------------------------------------------- 
 Restart;
@@ -79,7 +81,7 @@ if [[ $BUBBAUpdate == "1" ]]; then
 cd $BUBBAPath
 ./BUBBA.sh
 
-printf "${SkyBlue}Internet Connected Successfully${White}"
+printf "${SkyBlue}Internet Connected Successfully${White}\n"
 # am start -a android.intent.action.VIEW -d https://telegram/socks?server=127.0.0.1&port=3080
 
 #---------------------------------------------------------------------------------------------------------------------- 
