@@ -22,8 +22,8 @@ cat > $BUBBAPath/Permission.sh <<EOF
 chmod 777 $BUBBAPath/BUBBANET
 chmod +x $BUBBAPath/BUBBANET
 
-chmod 777 $BUBBAPath/BUBBA.sh
-chmod +x $BUBBAPath/BUBBA.sh
+chmod 777 $BUBBAPath/BUBBA
+chmod +x $BUBBAPath/BUBBA
 
 chmod 777 $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 chmod +x $BUBBAPath/storage/psiphon/database/psiphon.boltdb
