@@ -73,10 +73,16 @@ mkdir $BUBBAPath/storage/psiphon/database
 #---------------------------------------------------------------------------------------------------------------------- 
 #Download Program
 printf "${SkyBlue}Downloading Files${White}\n"
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh -O $BUBBAPath/BUBBA.sh
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET -O $BUBBAPath/BUBBANET
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json -O $BUBBAPath/config.json
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh -O $BUBBAPath/BUBBA.sh;clear
+
+printf "${SkyBlue}Downloading Files${White}\n"
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET -O $BUBBAPath/BUBBANET;clear
+
+printf "${SkyBlue}Downloading Files${White}\n"
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json -O $BUBBAPath/config.json;clear
+
+printf "${SkyBlue}Downloading Files${White}\n"
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb;clear
 
 #---------------------------------------------------------------------------------------------------------------------- 
 printf "${SkyBlue}Plugin are Installed Successfully${White}\n"
@@ -92,24 +98,26 @@ else
 
 if [[ $BUBBAUpdate == "1" ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
-
-
-
-
+P1(){
+sleep 1.5
+printf "${SkyBlue} B U B B A  N E T" 
+printf "${Red} Please Wait till BUBBANET Is Not Connected" 
+}
+P2(){
 Permission;
 cd $BUBBAPath
-./BUBBA.sh
+./BUBBA
+}
+P1 & P1=$! P2 & P2=$! wait $P1 $P2
 
-printf "${SkyBlue}Internet Connected Successfully${White}\n"
-# am start -a android.intent.action.VIEW -d https://telegram/socks?server=127.0.0.1&port=3080
+
+clear
+printf "${SkyBlue}Tap Enter To Restart Again${White}\n"; read Enter
+Restart;
 
 #---------------------------------------------------------------------------------------------------------------------- 
 else
 #---------------------------------------------------------------------------------------------------------------------- 
-
-
-
-
 
 printf "${Red}\nBUBBA New Update available" 
 printf "${Red}\nVersion :${SkyBlue} $BUBBAUpdate" 
