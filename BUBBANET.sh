@@ -6,7 +6,7 @@
 
 #IMPORTS
 BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate`
-BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
+BUBBAPath="$HOME/BUBBANET"
 
 Restart(){
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
@@ -57,9 +57,9 @@ wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $B
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
-chmod +x $BUBBAPath/BUBBANET
-chmod +x $BUBBAPath/BUBBA.sh
-chmod +x $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+chmod 777 $BUBBAPath/BUBBANET
+chmod 777 $BUBBAPath/BUBBA.sh
+chmod 777 $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 
 
 
