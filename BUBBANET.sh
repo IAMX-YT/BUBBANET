@@ -28,8 +28,8 @@ chmod +x $HOME/BUBBANET/BUBBA.sh
 chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
 " >> $HOME/BUBBANET/Permission.sh
 
-rm -rf $HOME/BUBBANET/Permission.sh
 bash $HOME/BUBBANET/Permission.sh
+rm -rf $HOME/BUBBANET/Permission.sh
 }
 
 #----------------------------------------------------------------------------------------------------------------------
