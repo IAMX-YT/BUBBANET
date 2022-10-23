@@ -19,13 +19,14 @@ bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANE
 Permission(){
 #SET EXECUTION PERMISSIONS
 cat > $BUBBAPath/Permission.sh <<EOF
-chmod 777 $HOME/BUBBANET/BUBBANET
-chmod 777 $HOME/BUBBANET/BUBBA.sh
-chmod 777 $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
+chmod 777 $BUBBAPath/BUBBANET
+chmod +x $BUBBAPath/BUBBANET
 
-chmod +x $HOME/BUBBANET/BUBBANET
-chmod +x $HOME/BUBBANET/BUBBA.sh
-chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
+chmod 777 $BUBBAPath/BUBBA.sh
+chmod +x $BUBBAPath/BUBBA.sh
+
+chmod 777 $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+chmod +x $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 EOF
 
 bash $BUBBAPath/Permission.sh
