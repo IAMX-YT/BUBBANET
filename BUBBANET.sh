@@ -3,7 +3,15 @@
 ################################
 #  Free Internet Access With BUBBA.NET #
 ################################
-  
+
+#IMPORTS
+BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate` >/dev/null 2>&1
+BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
+
+Restart(){
+bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
+}
+
 Red='\e[0;31m'  # Red & Black
 SkyBlue='\e[0;36m'  # SkyBlue & Black
 
@@ -11,12 +19,6 @@ SkyBlue='\e[0;36m'  # SkyBlue & Black
 printf "${Red}\nWelcome To BUBBANET"
 printf "\n"
 printf "${SkyBlue}\nConnecting..."
-
-
-#IMPORTS
-BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate` >/dev/null 2>&1
-BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
-
 
 
 #Download & Setup BUBBANET 
@@ -56,10 +58,12 @@ chmod +x $BUBBAPath/*/*
 chmod +x $BUBBAPath/*/*/*
 
 #---------------------------------------------------------------------------------------------------------------------- 
+Restart;
 
 
 
-else #if BUBBANET alredy Downloaded then
+else 
+#if BUBBANET alredy Downloaded then
 
 
 if [[ $BUBBAUpdate == "1" ]]; then
@@ -85,7 +89,7 @@ else
 printf "${Red}\nBUBBA New Update available" 
 printf "${Red}\nVersion :${SkyBlue} $BUBBAUpdate" 
 rm -rf  $BUBBAPath
-bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
+Restart;
 #---------------------------------------------------------------------------------------------------------------------- 
 fi
 
