@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash env 
+#!/data/data/com.termux/files/usr/bin/bash
   
 ################################
 #  Free Internet Access With BUBBA.NET #
