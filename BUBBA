@@ -91,10 +91,10 @@ else
 #if BUBBANET alredy Downloaded then
 
 
-if [[ $BUBBAUpdate == "1" ]]; then
+if [[ $BUBBAUpdate == "2" ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
 P1(){
-sleep 1.5
+sleep 4
 clear
 printf "${SkyBlue} B U B B A  N E T" 
 printf "${Red} Please Wait till BUBBANET Is Connected" 
@@ -103,13 +103,15 @@ P2(){
 Permission;
 cd $BUBBAPath
 ./BUBBA.sh
+
+clear
+printf "${SkyBlue}Tap Enter To Restart Again${White}\n"; read Enter
+printf "${SkyBlue}Ctrl + C To Exit${White}\n";
+Restart;
 }
 P1 & P1=$! P2 & P2=$! wait $P1 $P2
 
 
-clear
-printf "${SkyBlue}Tap Enter To Restart Again${White}\n"; read Enter
-Restart;
 
 #---------------------------------------------------------------------------------------------------------------------- 
 else
