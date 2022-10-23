@@ -33,22 +33,22 @@ if [[ ! -d $BUBBAPath ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
 printf "${Red}\nInstalling... Required Plugins${White}" 
-apt update && apt upgrade >/dev/null 2>&1
-pkg install wget curl -y >/dev/null 2>&1
+apt update && apt upgrade
+pkg install wget curl -y
 clear
 printf  "${SkyBlue}Plugin are installed${White}" 
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Making Folder
-mkdir $BUBBAPath >/dev/null 2>&1
-mkdir $BUBBAPath/storage/psiphon/database >/dev/null 2>&1
+mkdir $BUBBAPath
+mkdir $BUBBAPath/storage/psiphon/database
 
 #Download Program
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh  -O $BUBBAPath/BUBBA.sh >/dev/null 2>&1
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/BUBBANET >/dev/null 2>&1
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json  -O $BUBBAPath/config.json >/dev/null 2>&1
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb >/dev/null 2>&1
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh  -O $BUBBAPath/BUBBA.sh
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/BUBBANET
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json  -O $BUBBAPath/config.json
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
