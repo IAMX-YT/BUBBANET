@@ -29,8 +29,7 @@ chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
 " >> $HOME/BUBBANET/Permission.sh
 
 rm -rf $HOME/BUBBANET/Permission.sh
-
-bash Permission.sh
+bash $HOME/BUBBANET/Permission.sh
 }
 
 #----------------------------------------------------------------------------------------------------------------------
@@ -61,7 +60,6 @@ printf "${Red}Installing... Required Plugins${White}\n"
 # apt update && pkg update && apt upgrade && pkg upgrade
 pkg install wget curl -y
 clear
-printf "${SkyBlue}Plugin are Installed Successfully${White}\n"
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
@@ -73,15 +71,18 @@ mkdir $BUBBAPath/storage/psiphon/database
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Download Program
+printf "${SkyBlue}Downloading Files${White}\n"
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh -O $BUBBAPath/BUBBA.sh
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET -O $BUBBAPath/BUBBANET
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json -O $BUBBAPath/config.json
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 
 #---------------------------------------------------------------------------------------------------------------------- 
+printf "${SkyBlue}Plugin are Installed Successfully${White}\n"
+printf "${SkyBlue}BUBBA Files are Downloaded Successfully${White}\n"
+
 Permission;
 Restart;
-
 
 
 else 
