@@ -19,7 +19,7 @@
 	},
 	"PsiphonCore": 14,
 	"Psiphon": {
-		"CoreName": "ps",
+		"CoreName": "BUBBANET",
 		"Tunnel": 1,
 		"Region": "IN",
 		"Protocols": [

@@ -35,7 +35,8 @@ pkg install wget curl unzip zip -y
 apt install wget -y 
 apt install toilet -y 
 clear
-echo -e "Plugin are installed" 
+toilet -f term -F gay "Plugin are installed" 
+
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Making Folder
@@ -45,7 +46,7 @@ mkdir $BUBBAPath/storage/psiphon/database
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh  -O $BUBBAPath/BUBBA.sh
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/ps
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json  -O $BUBBAPath/config.json
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
