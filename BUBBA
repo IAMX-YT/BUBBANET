@@ -98,20 +98,19 @@ sleep 1.5
 clear
 sleep 10
 clear
-printf "${SkyBlue} B U B B A  N E T" 
+printf "${SkyBlue} B U B B A  N E T\n" 
 printf "${Red} Please Wait till BUBBANET Is Connected" 
 }
 P2(){
 Permission;
 cd $BUBBAPath
 ./BUBBA.sh
+}
+P1 & P1=$! P2 & P2=$! wait $P1 $P2
 
 clear
 printf "${SkyBlue}Tap Enter To Restart Again${White}\n"; read Enter
 printf "${SkyBlue}Ctrl + C To Exit${White}\n";
-}
-P1 & P1=$! P2 & P2=$! wait $P1 $P2
-
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
