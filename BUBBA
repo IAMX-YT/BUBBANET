@@ -53,7 +53,7 @@ if [[ ! -d $BUBBAPath ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
 printf "${Red}Installing... Required Plugins${White}\n"
-apt update && pkg update && apt upgrade && pkg upgrade
+apt update && pkg update && apt upgrade && pkg upgrade;clear
 pkg install wget curl -y
 clear
 
@@ -79,6 +79,9 @@ wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json -O $BU
 printf "${SkyBlue}Downloading Files${White}\n"
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb;clear
 
+printf "${SkyBlue}Downloading Files${White}\n"
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA -O $BUBBAPath/storage/psiphon/database/BUBBA;clear
+
 #---------------------------------------------------------------------------------------------------------------------- 
 printf "${SkyBlue}Plugin are Installed Successfully${White}\n"
 printf "${SkyBlue}BUBBA Files are Downloaded Successfully${White}\n"
@@ -96,10 +99,11 @@ if [[ $BUBBAUpdate == "1" ]]; then
 P1(){
 sleep 1.5
 clear
-sleep 10
+sleep 9
 clear
 printf "${SkyBlue} B U B B A  N E T\n" 
-printf "${Red} Please Wait till BUBBANET Is Connected" 
+printf "${Red} Please Wait till BUBBANET Is Connected\n" 
+printf "\n" 
 }
 P2(){
 Permission;
