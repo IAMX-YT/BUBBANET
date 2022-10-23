@@ -5,7 +5,7 @@
 ################################
 
 #IMPORTS
-BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate` >/dev/null 2>&1
+BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBAUpdate`
 BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
 
 Restart(){
@@ -27,35 +27,35 @@ if [[ ! -d $BUBBAPath ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
 #Get The permission of Termux 
 printf "${Red}\nType y" 
-termux-setup-storage
+termux-setup-storage >/dev/null 2>&1
   
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
 printf "${Red}\nInstalling... Required Plugins" 
-apt update && apt upgrade 
-pkg install wget curl unzip zip -y
-apt install wget -y 
-apt install toilet -y 
+apt update && apt upgrade >/dev/null 2>&1
+pkg install wget curl unzip zip -y >/dev/null 2>&1
+apt install wget -y >/dev/null 2>&1
+apt install toilet -y >/dev/null 2>&1
 clear
 printf  "${SkyBlue}Plugin are installed" 
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Making Folder
-mkdir $BUBBAPath
-mkdir $BUBBAPath/storage/psiphon/database
+mkdir $BUBBAPath >/dev/null 2>&1
+mkdir $BUBBAPath/storage/psiphon/database >/dev/null 2>&1
 
 #Download Program
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh  -O $BUBBAPath/BUBBA.sh
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/BUBBANET
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json  -O $BUBBAPath/config.json
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh  -O $BUBBAPath/BUBBA.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET  -O $BUBBAPath/BUBBANET >/dev/null 2>&1
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json  -O $BUBBAPath/config.json >/dev/null 2>&1
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db  -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb >/dev/null 2>&1
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
-chmod +x $BUBBAPath/*
-chmod +x $BUBBAPath/*/*
-chmod +x $BUBBAPath/*/*/*
+chmod +x $BUBBAPath/* >/dev/null 2>&1
+chmod +x $BUBBAPath/*/* >/dev/null 2>&1
+chmod +x $BUBBAPath/*/*/* >/dev/null 2>&1
 
 #---------------------------------------------------------------------------------------------------------------------- 
 Restart;
