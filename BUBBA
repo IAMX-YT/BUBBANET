@@ -91,10 +91,12 @@ else
 #if BUBBANET alredy Downloaded then
 
 
-if [[ $BUBBAUpdate == "2" ]]; then
+if [[ $BUBBAUpdate == "1" ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
 P1(){
-sleep 4
+sleep 1.5
+clear
+sleep 10
 clear
 printf "${SkyBlue} B U B B A  N E T" 
 printf "${Red} Please Wait till BUBBANET Is Connected" 
