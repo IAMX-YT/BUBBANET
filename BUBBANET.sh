@@ -27,16 +27,14 @@ if [[ ! -d $BUBBAPath ]]; then
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Get The permission of Termux 
-printf "${Red}\nType y${White}" 
-termux-setup-storage >/dev/null 2>&1
+# printf "${Red}\nType y${White}" 
+# termux-setup-storage
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
 printf "${Red}\nInstalling... Required Plugins${White}" 
 apt update && apt upgrade >/dev/null 2>&1
-pkg install wget curl unzip zip -y >/dev/null 2>&1
-apt install wget -y >/dev/null 2>&1
-apt install toilet -y >/dev/null 2>&1
+pkg install wget curl -y >/dev/null 2>&1
 clear
 printf  "${SkyBlue}Plugin are installed${White}" 
 
@@ -73,11 +71,11 @@ if [[ $BUBBAUpdate == "1" ]]; then
 
 
 
-cd $BUBBAPath;
+cd $BUBBAPath
 ./BUBBA.sh
 
 printf "${SkyBlue}Internet Connected Successfully${White}"
-am start -a android.intent.action.VIEW -d https://t.me/socks?server=127.0.0.1&port=3080
+# am start -a android.intent.action.VIEW -d https://telegram/socks?server=127.0.0.1&port=3080
 
 #---------------------------------------------------------------------------------------------------------------------- 
 else
