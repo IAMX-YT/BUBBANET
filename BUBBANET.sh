@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-  
+
 ################################
 #  Free Internet Access With BUBBA.NET #
 ################################
@@ -60,6 +60,10 @@ wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $B
 chmod 777 $BUBBAPath/BUBBANET
 chmod 777 $BUBBAPath/BUBBA.sh
 chmod 777 $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+
+chmod +x $HOME/BUBBANET/BUBBANET
+chmod +x $HOME/BUBBANET/BUBBA.sh
+chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
 
 
 
