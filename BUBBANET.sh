@@ -52,13 +52,13 @@ if [[ ! -d $BUBBAPath ]]; then
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Get The permission of Termux 
-# printf "${Red}\nType y${White}" 
-# termux-setup-storage
+printf "${Red}Type y${White}\n" 
+termux-setup-storage
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
 printf "${Red}Installing... Required Plugins${White}\n"
-# apt update && pkg update && apt upgrade && pkg upgrade
+apt update && pkg update && apt upgrade && pkg upgrade
 pkg install wget curl -y
 clear
 
@@ -73,7 +73,7 @@ mkdir $BUBBAPath/storage/psiphon/database
 #---------------------------------------------------------------------------------------------------------------------- 
 #Download Program
 printf "${SkyBlue}Downloading Files${White}\n"
-wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh -O $BUBBAPath/BUBBA.sh;clear
+wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA -O $BUBBAPath/BUBBA;clear
 
 printf "${SkyBlue}Downloading Files${White}\n"
 wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET -O $BUBBAPath/BUBBANET;clear
@@ -101,7 +101,7 @@ if [[ $BUBBAUpdate == "1" ]]; then
 P1(){
 sleep 1.5
 printf "${SkyBlue} B U B B A  N E T" 
-printf "${Red} Please Wait till BUBBANET Is Not Connected" 
+printf "${Red} Please Wait till BUBBANET Is Connected" 
 }
 P2(){
 Permission;
