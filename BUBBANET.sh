@@ -9,7 +9,7 @@ BUBBAUpdate=`curl --raw https://raw.githubusercontent.com/IAMX-YT/BUBBANET/maste
 BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
 
 Restart(){
-bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
+bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
 }
 
 Red='\e[0;31m'  # Red & Black
