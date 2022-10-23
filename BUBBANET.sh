@@ -30,12 +30,11 @@ termux-setup-storage
 #Checking Required Pakcages 
 echo -e "Installing... Required Plugins" 
 apt update && apt upgrade 
-gem install lolcat 
 pkg install wget curl unzip zip -y
 apt install wget -y 
 apt install toilet -y 
 clear
-toilet -f term -F gay "Plugin are installed" 
+echo -e  "Plugin are installed" 
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
@@ -70,7 +69,7 @@ if [[ $BUBBAUpdate == "1" ]]; then
 cd $BUBBAPath;
 ./BUBBA.sh
 
-toilet -f term -F gay "Internet Connected Successfully"
+echo -e "Internet Connected Successfully"
 am start -a android.intent.action.VIEW -d https://t.me/socks?server=127.0.0.1&port=3080
 
 #---------------------------------------------------------------------------------------------------------------------- 
@@ -81,8 +80,8 @@ else
 
 
 
-toilet -f term -F gay "BUBBA New Update available" 
-toilet -f term -F gay "Version : $BUBBAUpdate" 
+echo -e "BUBBA New Update available" 
+echo -e "Version : $BUBBAUpdate" 
 rm -rf  $BUBBAPath
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.sh)
 #---------------------------------------------------------------------------------------------------------------------- 
