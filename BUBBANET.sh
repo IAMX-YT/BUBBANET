@@ -57,14 +57,15 @@ wget https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db -O $B
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
-chmod 777 $BUBBAPath/BUBBANET
-chmod 777 $BUBBAPath/BUBBA.sh
-chmod 777 $BUBBAPath/storage/psiphon/database/psiphon.boltdb
+echo "
+chmod 777 $HOME/BUBBANET/BUBBANET
+chmod 777 $HOME/BUBBANET/BUBBA.sh
+chmod 777 $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
 
 chmod +x $HOME/BUBBANET/BUBBANET
 chmod +x $HOME/BUBBANET/BUBBA.sh
 chmod +x $HOME/BUBBANET/storage/psiphon/database/psiphon.boltdb
-
+" >> $HOME/BUBBANET/Permission.sh
 
 
 #---------------------------------------------------------------------------------------------------------------------- 
