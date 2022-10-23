@@ -18,7 +18,9 @@ White='\e[0m' # ORIGNAL {Black & White}
 
 clear
 printf "${Red}\nWelcome To BUBBANET"
+sleep 2
 printf "\n"
+sleep 2
 printf "${SkyBlue}\nConnecting..."
 
 
@@ -33,8 +35,8 @@ if [[ ! -d $BUBBAPath ]]; then
 #---------------------------------------------------------------------------------------------------------------------- 
 #Checking Required Pakcages 
 printf "${Red}\nInstalling... Required Plugins${White}" 
-apt update && apt upgrade
-pkg install wget curl -y
+apt update && pkg update && apt upgrade && pkg upgrade
+pkg install wget curl -y
 clear
 printf  "${SkyBlue}Plugin are installed${White}" 
 
@@ -48,10 +50,10 @@ mkdir $BUBBAPath/storage/psiphon/database
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #Download Program
-wget -O $BUBBAPath/BUBBA.sh https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh
-wget -O $BUBBAPath/BUBBANET https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET
-wget -O $BUBBAPath/config.json https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json
-wget -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb  https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db
+wget -O $BUBBAPath/BUBBA.sh https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.sh
+wget -O $BUBBAPath/BUBBANET https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET
+wget -O $BUBBAPath/config.json https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA.json
+wget -O $BUBBAPath/storage/psiphon/database/psiphon.boltdb  https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBANET.db
 
 #---------------------------------------------------------------------------------------------------------------------- 
 #SET EXECUTION PERMISSIONS
