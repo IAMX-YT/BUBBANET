@@ -13,7 +13,7 @@ BUBBAPath="/data/data/com.termux/files/home/BUBBANET"
 #---------------------------------------------------------------------------------------------------------------------- 
 
 Restart(){
-bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA∆)
+bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/BUBBANET/master/BUBBA)
 }
 
 Permission(){
